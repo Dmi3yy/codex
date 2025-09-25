@@ -156,6 +156,7 @@ async function setupCodexAuth() {
     }
     
     // Ensure config directories exist, matching the environment for codex exec
+    await ensureDirectory(path.join(WORKSPACE_ROOT, '.codex'));
     await ensureDirectory(path.join(WORKSPACE_ROOT, '.config'));
     await ensureDirectory(path.join(WORKSPACE_ROOT, '.local/share'));
     
